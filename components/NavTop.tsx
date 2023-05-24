@@ -1,7 +1,12 @@
 "use client"
 
 import Link from "next/link"
-import { BeakerIcon } from "@heroicons/react/24/solid"
+import { Bars2Icon, BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
+import {
+  Bars2Icon as Bars2IconSolid,
+  BeakerIcon as BeakerIconSolid,
+  HeartIcon as HeartIconSolid,
+} from "@heroicons/react/24/solid"
 
 import {
   Sheet,
@@ -13,20 +18,26 @@ import {
 } from "@/components/ui/sheet"
 import NavSide from "@/components/NavSide"
 import { Icons } from "@/components/icons"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function NavTop() {
   return (
     <header className="fixed top-0 z-40 w-full border-b bg-background">
       <nav className="grid w-full auto-cols-fr grid-cols-3">
         <div className="container flex h-16 w-full items-center  justify-start space-x-4 ">
-          <Icons.twitter className="h-5 w-5 fill-current" />
+          <Sheet>
+            <SheetTrigger>
+              <Bars2Icon className="h-6 w-6 text-blue-500" />
+            </SheetTrigger>
+            <SheetContent position="left" size="default">
+              {/* <SheetTitle></SheetTitle> */}
+              {/* <SheetDescription>
+              </SheetDescription> */}
+              <NavSide />
+            </SheetContent>
+          </Sheet>
         </div>
         <div className="container flex h-16 w-full items-center  justify-center space-x-4 ">
           <Link href="/">
-            <Icons.twitter className="h-5 w-5 fill-current" />
-          </Link>
-          <Link href="/about">
             <Icons.twitter className="h-5 w-5 fill-current" />
           </Link>
         </div>
@@ -36,10 +47,12 @@ export default function NavTop() {
               <BeakerIcon className="h-6 w-6 text-blue-500" />
             </SheetTrigger>
             <SheetContent>
+              {/* <SheetTitle></SheetTitle> */}
+              {/* <SheetDescription>
+              </SheetDescription> */}
               <NavSide />
             </SheetContent>
           </Sheet>
-          <ThemeToggle />
         </div>
       </nav>
     </header>
