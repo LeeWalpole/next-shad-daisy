@@ -1,7 +1,17 @@
 "use client"
 
 import Link from "next/link"
+import { BeakerIcon } from "@heroicons/react/24/solid"
 
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import NavSide from "@/components/NavSide"
 import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -21,7 +31,14 @@ export default function NavTop() {
           </Link>
         </div>
         <div className="container flex h-16 w-full items-center justify-end space-x-4 ">
-          <Icons.twitter className="h-5 w-5 fill-current" />
+          <Sheet>
+            <SheetTrigger>
+              <BeakerIcon className="h-6 w-6 text-blue-500" />
+            </SheetTrigger>
+            <SheetContent>
+              <NavSide />
+            </SheetContent>
+          </Sheet>
           <ThemeToggle />
         </div>
       </nav>
