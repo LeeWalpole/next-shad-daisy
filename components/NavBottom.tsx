@@ -11,9 +11,9 @@ export default function NavBottom() {
       <nav className="m-auto flex w-96 justify-evenly align-middle">
         <div className="container flex h-16 w-full items-center  justify-start space-x-4 ">
           <button>
-            <Link href="/">
+            <Link href="/discover">
               <span>
-                {pathname === "/" ? (
+                {pathname === "/discover" ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
