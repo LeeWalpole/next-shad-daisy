@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Bars2Icon, BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
 import {
@@ -21,10 +22,33 @@ import Notifications from "@/components/Notifications"
 import { Icons } from "@/components/icons"
 
 export default function NavTop() {
+  const [showNavbar, setShowNavbar] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY
+      const threshold = 100 // Adjust this value to control when the navbar appears
+
+      setShowNavbar(scrolled > threshold)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <header className="fixed top-0 z-40 w-full border-b bg-background">
+    <header
+      className={`
+        fixed left-0 right-0 top-0 z-20 h-16 w-full  bg-gradient-to-b from-black/80 to-transparent transition-all duration-100
+        ${
+          showNavbar
+            ? "border-b bg-background opacity-100"
+            : "bg-transparent opacity-100 "
+        }
+      `}
+    >
       <nav className="grid w-full auto-cols-fr grid-cols-3">
-        <div className="container flex h-16 w-full items-center  justify-start space-x-4 ">
+        <div className="container flex w-full items-center  justify-start space-x-4 ">
           <Sheet>
             <SheetTrigger>
               <Bars2Icon className="h-6 w-6 text-blue-500" />
