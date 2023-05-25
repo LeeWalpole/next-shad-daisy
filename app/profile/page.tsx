@@ -36,13 +36,13 @@ export default function IndexPage() {
             </div>
           </div>
           <header className="flex flex-col items-start justify-center pt-3.5">
-            <h5 className="text-lg font-bold">Display Name</h5>
+            <h5 className="text-md font-bold">Display Name</h5>
             <p className="text-sm">@username</p>
-            <Icons.heart className="h-5 w-5 fill-current" />
-            <Icons.heartSolid className="h-5 w-5 fill-current" />
           </header>
           <header className="flex items-center justify-end gap-3.5 pt-3.5">
-            <Button variant="secondary">Chat</Button>
+            <Button variant="secondary">
+              <Icons.heart className="h-6 w-6" />
+            </Button>
           </header>
         </section>
         <div className="cta-buttons flex items-center justify-between p-3.5">
