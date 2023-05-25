@@ -1,6 +1,7 @@
 "use client"
 
 // Import Swiper React components
+import { useEffect, useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles

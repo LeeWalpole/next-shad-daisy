@@ -43,7 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <NavTop />
-            <main className="relative m-auto  min-h-screen max-w-[1240px]  bg-slate-500 py-16">
+            <main className="relative m-auto min-h-screen max-w-[1240px] py-16">
               {children}
             </main>
             <NavBottom />
