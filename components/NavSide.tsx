@@ -2,11 +2,15 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { Bars2Icon, BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
+import {
+  Bars2Icon as Bars2IconSolid,
+  BeakerIcon as BeakerIconSolid,
+  HeartIcon as HeartIconSolid,
+} from "@heroicons/react/24/solid"
 
 import { SheetTrigger } from "@/components/ui/sheet"
-import Icon from "@/components/Icons"
-
-// import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function NavSide() {
   const pathname = usePathname()
@@ -16,17 +20,9 @@ export default function NavSide() {
         <Link href="/" className="b-2 w-full border-b p-3.5 text-lg">
           <SheetTrigger className="flex w-full flex-row justify-start gap-4 align-middle font-semibold ">
             {pathname === "/" ? (
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
+              <BeakerIconSolid className="h-7 w-7 text-blue-500 " />
             ) : (
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
+              <BeakerIcon className="h-7 w-7" />
             )}
             Home
           </SheetTrigger>
@@ -34,23 +30,16 @@ export default function NavSide() {
         <Link href="/discover" className="b-2 w-full border-b p-3.5  text-lg">
           <SheetTrigger className="flex w-full flex-row justify-start gap-4  align-middle font-semibold ">
             {pathname === "/discover" ? (
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
+              <BeakerIconSolid className="h-7 w-7 text-blue-500 " />
             ) : (
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
+              <BeakerIcon className="h-7 w-7" />
             )}
             Discover
           </SheetTrigger>
         </Link>
       </nav>
       <br></br>
+      <ThemeToggle />
     </>
   )
 }

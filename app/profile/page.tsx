@@ -2,7 +2,6 @@ import Link from "next/link"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import Icon from "@/components/Icons"
 import Swiper from "@/components/Swiper"
 
 // import Carousel from '$lib/components/Carousel.svelte';
@@ -40,19 +39,7 @@ export default function IndexPage() {
             <p className="text-sm">@username</p>
           </header>
           <header className="flex items-center justify-end gap-3.5">
-            <Button variant="secondary">
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
-              Chat
-              <Icon
-                name="chat"
-                style="outline"
-                className="h-6 w-6 text-blue-500"
-              />
-            </Button>
+            <Button variant="secondary">Chat</Button>
           </header>
         </section>
         <div className="cta-buttons flex items-center justify-between p-3.5">

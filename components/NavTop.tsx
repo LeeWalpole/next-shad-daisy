@@ -1,6 +1,12 @@
 "use client"
 
 import Link from "next/link"
+import { Bars2Icon, BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
+import {
+  Bars2Icon as Bars2IconSolid,
+  BeakerIcon as BeakerIconSolid,
+  HeartIcon as HeartIconSolid,
+} from "@heroicons/react/24/solid"
 
 import {
   Sheet,
@@ -10,9 +16,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import Icon from "@/components/Icons"
 import NavSide from "@/components/NavSide"
 import Notifications from "@/components/Notifications"
+import { Icons } from "@/components/icons"
 
 export default function NavTop() {
   return (
@@ -21,11 +27,7 @@ export default function NavTop() {
         <div className="container flex h-16 w-full items-center  justify-start space-x-4 ">
           <Sheet>
             <SheetTrigger>
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
+              <Bars2Icon className="h-6 w-6 text-blue-500" />
             </SheetTrigger>
             <SheetContent position="left" size="default">
               {/* <SheetTitle></SheetTitle> */}
@@ -37,17 +39,13 @@ export default function NavTop() {
         </div>
         <div className="container flex h-16 w-full items-center  justify-center space-x-4 ">
           <Link href="/">
-            <Icon name="chat" style="solid" className="h-6 w-6 text-blue-500" />
+            <Icons.twitter className="h-5 w-5 fill-current" />
           </Link>
         </div>
         <div className="container flex h-16 w-full items-center justify-end space-x-4 ">
           <Sheet>
             <SheetTrigger>
-              <Icon
-                name="chat"
-                style="solid"
-                className="h-6 w-6 text-blue-500"
-              />
+              <BeakerIcon className="h-6 w-6 text-blue-500" />
             </SheetTrigger>
             <SheetContent>
               {/* <SheetTitle></SheetTitle> */}

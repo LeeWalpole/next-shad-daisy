@@ -2,8 +2,11 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-
-import Icon from "@/components/Icons"
+import { BeakerIcon, HeartIcon } from "@heroicons/react/24/outline"
+import {
+  BeakerIcon as BeakerSolidIcon,
+  HeartIcon as HeartSolidIcon,
+} from "@heroicons/react/24/solid"
 
 export default function NavBottom() {
   const pathname = usePathname()
@@ -16,17 +19,9 @@ export default function NavBottom() {
             <Link href="/discover">
               <span>
                 {pathname === "/discover" ? (
-                  <Icon
-                    name="chat"
-                    style="solid"
-                    className="h-6 w-6 text-blue-500"
-                  />
+                  <BeakerSolidIcon className="h-6 w-6 text-blue-500" />
                 ) : (
-                  <Icon
-                    name="chat"
-                    style="solid"
-                    className="h-6 w-6 text-blue-500"
-                  />
+                  <BeakerIcon className="h-6 w-6" />
                 )}
               </span>
             </Link>
@@ -37,17 +32,9 @@ export default function NavBottom() {
             <Link href="/dashboard">
               <span>
                 {pathname === "/dashboard" ? (
-                  <Icon
-                    name="chat"
-                    style="solid"
-                    className="h-6 w-6 text-blue-500"
-                  />
+                  <HeartSolidIcon className="h-6 w-6 text-blue-500" />
                 ) : (
-                  <Icon
-                    name="chat"
-                    style="solid"
-                    className="h-6 w-6 text-blue-500"
-                  />
+                  <HeartIcon className="h-6 w-6" />
                 )}
               </span>
             </Link>
@@ -58,17 +45,9 @@ export default function NavBottom() {
             <Link href="/profile">
               <span>
                 {pathname === "/profile" ? (
-                  <Icon
-                    name="chat"
-                    style="solid"
-                    className="h-6 w-6 text-blue-500"
-                  />
+                  <HeartSolidIcon className="h-6 w-6 text-blue-500" />
                 ) : (
-                  <Icon
-                    name="chat"
-                    style="solid"
-                    className="h-6 w-6 text-blue-500"
-                  />
+                  <HeartIcon className="h-6 w-6" />
                 )}
               </span>
             </Link>
