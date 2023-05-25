@@ -17,6 +17,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import NavSide from "@/components/NavSide"
+import Notifications from "@/components/Notifications"
 import { Icons } from "@/components/icons"
 
 export default function NavTop() {
@@ -50,7 +51,7 @@ export default function NavTop() {
               {/* <SheetTitle></SheetTitle> */}
               {/* <SheetDescription>
               </SheetDescription> */}
-              <NavSide />
+              <Notifications />
             </SheetContent>
           </Sheet>
         </div>

@@ -42,9 +42,9 @@ export default function NavBottom() {
         </div>
         <div className="container flex h-16 w-full items-center justify-end space-x-4 ">
           <button>
-            <Link href="/about">
+            <Link href="/profile">
               <span>
-                {pathname === "/about" ? (
+                {pathname === "/profile" ? (
                   <HeartSolidIcon className="h-6 w-6 text-blue-500" />
                 ) : (
                   <HeartIcon className="h-6 w-6" />
