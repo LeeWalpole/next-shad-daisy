@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/sheet"
 import NavSide from "@/components/NavSide"
 import Notifications from "@/components/Notifications"
-import { Icons } from "@/components/icons"
+import { Icons } from "@/components/iconsold"
 
 export default function NavTop() {
   return (
