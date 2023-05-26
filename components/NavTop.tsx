@@ -39,7 +39,7 @@ export default function NavTop() {
   return (
     <header
       className={`
-        fixed left-0 right-0 top-0 z-20 h-16 w-full  bg-gradient-to-b from-black/80 to-transparent transition-all duration-100
+        fixed inset-x-0 top-0 z-20 h-16 w-full  bg-gradient-to-b from-black/80 to-transparent transition-all duration-100
         ${
           showNavbar
             ? "border-b bg-background opacity-100"
